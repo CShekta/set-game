@@ -87,5 +87,4 @@ class Game
     self.print_all_sets
     puts "You discovered #{@all_sets.length} sets in total"
   end
-
 end
