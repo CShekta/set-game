@@ -11,18 +11,11 @@ RSpec.describe Deck do
   end
 
   it "should have 81 cards upon creation" do
-    expect(deck.length).to eq 81
+    expect(deck.draw(81).length).to eq 81
+    expect(deck.draw(1).length).to eq 0
   end
 
-  it "should remove cards when drawn" do
-    expect(deck.length).to eq 78
+  it "should remove cards from deck by drawing" do
+    expect(deck.draw(2).length).to eq 2
   end
-  #
-  # it "should have the correct fill" do
-  #   expect(deck.fill).to eq "shaded"
-  # end
-  #
-  # it "should have the correct color" do
-  #   expect(deck.color).to eq "red"
-  # end
 end
